@@ -55,15 +55,15 @@ int main() {
     printf("Enter size elements: ");
     scanf("%d", &size);
     int arr[size];
-    for(int i = 0; i < size; i++) {
-        arr[i] = getrand(0, 100000);
-    }
 
     int len = 0;
     double sum_result_time = 0.0;
     double itog = 0.0;
 
     while(len!=100){
+        for(int i = 0; i < size; i++) {
+            arr[i] = getrand(0, 100000);
+        }
         double one_time = wtime();
         quickSort(arr, 0, size-1);
         double result_time = wtime() - one_time;
